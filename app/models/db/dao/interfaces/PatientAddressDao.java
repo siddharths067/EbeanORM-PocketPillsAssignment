@@ -23,7 +23,7 @@ public interface PatientAddressDao {
      * @param addressId {@see PatientAddress} identifier
      * @return CompletableFuture of type True if successfull, false otherwise
      */
-    CompletionStage<Boolean> deletePatientAddress(long patientId, long addressId);
+    CompletionStage<Boolean> deletePatientAddress(long addressId);
 
 
     /**

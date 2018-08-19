@@ -4,8 +4,10 @@
 
 
 ## TODO: Implement these
-GET      /address               controllers.AddressController.getPatientAddress()
+# Provide all the addresses of PatiendId
+GET      /address/:patientId               controllers.AddressController.getPatientAddress(patientId: Long)
 
+# Provide the address to delete
 DELETE   /address/:addressId    controllers.AddressController.deletePatientAddress(addressId: Long)
 
 POST     /address               controllers.AddressController.addPatientAddress()

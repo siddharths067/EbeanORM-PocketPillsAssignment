@@ -73,3 +73,5 @@ jacocoExcludes in Test := Seq(
 )
 
 resolvers += Resolver.sbtPluginRepo("releases")
+
+playEbeanDebugLevel := 4

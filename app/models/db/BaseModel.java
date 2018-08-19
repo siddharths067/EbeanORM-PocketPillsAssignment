@@ -1,7 +1,10 @@
 package models.db;
 
+import akka.parboiled2.RuleTrace;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import io.ebean.Finder;
+import io.ebean.Model;
 import io.ebean.annotation.*;
 
 import javax.persistence.Column;
@@ -11,7 +14,7 @@ import javax.persistence.Version;
 import java.sql.Timestamp;
 
 @MappedSuperclass
-public class BaseModel {
+public class BaseModel extends Model {
 
     @Id
     @JsonIgnore
@@ -44,4 +47,12 @@ public class BaseModel {
     @JsonIgnore
     Long version;
 
+    public long getId(){
+        return this.id;
+    }
+
+    public void setEnabled(boolean isEnabled){
+        this.enabled = isEnabled;
+    }
+    public boolean getEnabled(){return this.enabled;}
 }
