@@ -1,8 +1,5 @@
 # Pocketpills Backend
 
-## TODO: Unit Testing
-
-
 ### Prerequisites
 
 #### Database

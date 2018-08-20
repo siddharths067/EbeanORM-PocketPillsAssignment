@@ -128,9 +128,9 @@ public class AddressController extends Controller {
             res = (new PatientAddressDaoImpl().addPatientAddress(patientId, patientToAdd))
                     .thenApplyAsync(
                             insertionId ->{
-                                System.out.println(patientId + " was at " + insertionId);
+                                System.out.println(insertionId);
                                 if(insertionId != -1)
-                                    return ok(insertionId.toString());
+                                    return ok(insertionId.toString()).withHeader("Content-Type","text/plain");
                                 else
                                     return internalServerError("Record Not Inserted");
                             }
